@@ -1,1 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+/*Hello again Richard :) */
 
+/*
+1. Root Settings
+2. Body, HTML settings
+3. Navbar
+4. Buttons
+5. Hero
+6.
+*/
+
+/* 1. Root Settings */
+* {
+  font-family: "PT Sans", sans-serif;
+  box-sizing: border-box;
+  --one: #337daf;
+  --two: #e0e0e0;
+  --three: #2e3135;
+  --four: #245a7d;
+}
+/*Validated!*/
+/* 2. Body, HTML settings*/
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+  background-color: #e0e0e0;
+}
+/*Validated!*/
+/* 3. Navbar*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--one);
+  height: auto;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  margin: auto;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+}
+.navbar .brand-logo{
+    margin-top: 2vh;
+}
+.navbar ul {
+    display: flex;
+    margin-top: 11vh;
+    margin-right: 5vh;
+    padding: 0%;
+    list-style: none;
+
+}
+.navbar li a{
+    text-decoration: none;
+    color: var(--three);
+    padding: 3vh;
+    font-size: 20px;
+}
+.navbar li:hover{
+    font-weight: bold;
+    font-style: italic;
+}
+.navbar input{
+    padding: 6px;
+    border: none;
+    width: 40vh;
+    margin-left: 5vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 2px;
+    font-size: 17px;
+  }
+.navbar button {
+    width: 10vh;
+    height: 5vh;
+    font-size: 17px;
+}
+.toggle-button{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: var(--two);
+    border-radius: 10%;
+}
+/*Validated!*/
+
+/* 4. Buttons*/
+.button-one {
+  border: none;
+  background-color: #2e3135;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: grab;
+  color: #e0e0e0;
+  font-size: 20px;
+  padding: 13px 32px;
+  text-decoration: none;
+}
+.button-two {
+  border: none;
+  background-color: #2e3135;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: grab;
+  color: #e0e0e0;
+  font-size: 20px;
+  padding: 13px 32px;
+  text-decoration: none;
+}
+/*Validated!*/
+
+/*5. Hero*/
+
+.heropage{
+    background-image: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0.1)), url(/img/slamsugeone.jpeg);
+    height: 120vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+.maintext {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--two);
+    font-size: 4rem;
+    font-weight: 200;
+  }
+/*Validated!*/
+
+
+@media only screen and (max-width:550px)
+{
+    .heropage{
+        height: 215vh;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 30%;
+    }
+    .navbar input{
+        margin-left: 3vh;
+        width: 70%;
+    }
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links ul li{
+        text-align: center;
+    }
+    .navbar-links ul li a{
+        padding: .05rem 1rem;
+    }
+    .navbar-links.active{
+        display: flex;
+    }
+    .brand-logo{
+        margin-top: 2vw;
+    }
+}
